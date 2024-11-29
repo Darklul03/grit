@@ -21,11 +21,11 @@ from datasets.caption.transforms import *
 
 spacy_eng = spacy.load('en_core_web_sm')
 
-train_image_path = Path("/media/local_workspace/quang/datasets/vietcap/train-images")
-test_image_path = Path("/media/local_workspace/quang/datasets/vietcap/public-test-images")
-train_caption_path = "/media/local_workspace/quang/datasets/vietcap/thesis_test/train_data.json"
-test_caption_path = "/media/local_workspace/quang/datasets/vietcap/thesis_test/test_data.json"
-vi_caption_path = "/media/local_workspace/quang/datasets/vietcap/vi_captions.json"
+train_image_path = Path("/kaggle/working/ktvic-dataset/train-images/train-images")
+test_image_path = Path("/kaggle/working/ktvic-dataset/public-test-images/public-test-images")
+train_caption_path = "/kaggle/working/ktvic-dataset/train_data.json"
+test_caption_path = "/kaggle/working/ktvic-dataset/test_data.json"
+vi_caption_path = "/kaggle/working/ktvic-dataset/vi_captions.json"
 
 
 def get_transform(resize_name="maxwh", size=[384, 640], randaug=False):
