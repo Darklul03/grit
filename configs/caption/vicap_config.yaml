@@ -4,7 +4,7 @@ exp:
   rank: 0
   ngpus_per_node: 2
   world_size: 2
-  checkpoint: '/kaggle/input/grit_checkpoint_4ds.pth'
+  checkpoint: '/kaggle/input/model_best.pth'
   eval: False
   resume: False
 
