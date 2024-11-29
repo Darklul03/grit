@@ -4,7 +4,7 @@ exp:
   rank: 0
   ngpus_per_node: 2
   world_size: 2
-  checkpoint: '/kaggle/input/model_best.pth'
+  checkpoint: '/kaggle/input/grit_checkpoints_4ds.pth/transformers/default/1/grit_checkpoint_4ds.pth'
   eval: False
   resume: False
 
@@ -49,7 +49,7 @@ model:
     n_layers: 3
 
   detector: 
-    checkpoint: '' 
+    checkpoint: '/kaggle/input/detector_checkpoint_4ds.pth/other/default/1/detector_checkpoint_4ds.pth' 
     d_model: 512
     dim_feedforward: 1024
     num_heads: 8
@@ -76,12 +76,12 @@ optimizer:
   beta_2: 0.99
   batch_size: 8
   num_workers: 2
-  freezing_xe_epochs: 0
-  freezing_sc_epochs: 0
-  finetune_xe_epochs: 10
-  finetune_sc_epochs: 10
-  freeze_detector: False
-  freeze_backbone: False
+  freezing_xe_epochs: 10
+  freezing_sc_epochs: 10
+  finetune_xe_epochs: 0
+  finetune_sc_epochs: 0
+  freeze_detector: True
+  freeze_backbone: True
 
 hydra:
   run:
