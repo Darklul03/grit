@@ -205,7 +205,7 @@ def main(gpu, config):
 
     scheduler = CosineLRScheduler(
         optimizers['model'],
-        num_epochs=config.optimizer.finetune_xe_epochs,
+        num_epochs=config.optimizer.freezing_xe_epochs + config.optimizer.finetune_xe_epochs,
         num_its_per_epoch=len(dataloaders['train']),
         init_lr=config.optimizer.xe_lr,
         min_lr=config.optimizer.min_lr,
