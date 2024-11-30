@@ -4,7 +4,8 @@ exp:
   rank: 0
   ngpus_per_node: 2
   world_size: 2
-  checkpoint: '/kaggle/input/grit_checkpoints_4ds.pth/transformers/default/1/grit_checkpoint_4ds.pth'
+#   checkpoint: '/kaggle/input/grit_checkpoints_4ds.pth/transformers/default/1/grit_checkpoint_4ds.pth'
+  checkpoint: ''
   eval: False
   resume: False
 
